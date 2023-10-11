@@ -31,3 +31,4 @@
 
 en:
   hello: "Hello world"
+  wrong_temp_message: "the permissible temperature ranges from -100 to 100"

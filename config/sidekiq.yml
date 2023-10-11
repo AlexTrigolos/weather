@@ -1,0 +1,5 @@
+:schedule:
+  CurrentTemperatureUpdateJob:
+    cron: '*/5 * * * *'
+  HistoricalUpdateJob:
+    cron: '1 * * * *'

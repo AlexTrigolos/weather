@@ -5,7 +5,7 @@ module Api
     module Responses
       class CurrentCondition < Base
         def data
-          parsed_response.nil? ? nil : parsed_response[0]['Temperature']['Metric']['Value']
+          parsed_response.blank? ? {} : { temperature: parsed_response[0]['Temperature']['Metric']['Value'] }
         end
       end
     end

@@ -5,7 +5,7 @@ module Api
     module Responses
       class Historical < Base
         def data
-          return nil if parsed_response.nil?
+          return {} if parsed_response.blank?
 
           parsed_response.each_with_object({}).with_index do |(data, useful_data), index|
             date_time = Time.zone.parse(data['LocalObservationDateTime']).strftime('%Y-%m-%d %H:%M:%S')

@@ -4,11 +4,11 @@ module Api
   module AccuWeather
     class Client
       def current_condition
-        Api::AccuWeather::Responses::CurrentCondition.new(get(''))
+        Api::AccuWeather::Responses::CurrentCondition.new(get)
       end
 
       def historical
-        Api::AccuWeather::Responses::Historical.new(get('historical/24'))
+        Api::AccuWeather::Responses::Historical.new(get('/historical/24'))
       end
 
       private
@@ -18,7 +18,7 @@ module Api
       end
 
       def url(path)
-        "http://dataservice.accuweather.com/currentconditions/v1/#{Rails.application.credentials.location_key}/#{path}?apikey=#{Rails.application.credentials.api_key}"
+        "http://dataservice.accuweather.com/currentconditions/v1/#{Rails.application.credentials.location_key}#{path}?apikey=#{Rails.application.credentials.api_key}"
       end
     end
   end

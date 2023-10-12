@@ -2,13 +2,13 @@
 
 class WeathersController < ApplicationController
   def current
-    current_temperature = CurrentTemperature.first
-    render(json: current_temperature, only: :temperature)
+    temperature = CurrentTemperature.first.temperature
+    render(json: { temperature: })
   end
 
   def historical
     historicals = Historical.all
-    render(json: historicals)
+    render(json: { data: historicals })
   end
 
   def max

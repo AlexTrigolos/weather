@@ -1,0 +1,201 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Returns server status",
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "example": "OK"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/weather/current": {
+      "get": {
+        "summary": "Returns current temperature",
+        "tags": [
+          "Current"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/weather/historical": {
+      "get": {
+        "summary": "Returns historical temperature data for the last 24 hours",
+        "tags": [
+          "Historical"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Historical"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/weather/historical/min": {
+      "get": {
+        "summary": "Returns minimum temperature for the last 24 hours",
+        "tags": [
+          "Historical"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/weather/historical/max": {
+      "get": {
+        "summary": "Returns maximum temperature for the last 24 hours",
+        "tags": [
+          "Historical"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/weather/historical/avg": {
+      "get": {
+        "summary": "Returns average temperature for the last 24 hours",
+        "tags": [
+          "Historical"
+        ],
+        "responses": {
+          "200": {
+            "description": "If everything ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "temperature": {
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Historical": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "date_time": {
+            "type": "string",
+            "example": "2023-10-11 18:57:00"
+          },
+          "temperature": {
+            "type": "number",
+            "example": 6.1
+          },
+          "created_at": {
+            "type": "datetime",
+            "example": "2022-12-07T10:31:04.528Z"
+          },
+          "updated_at": {
+            "type": "datetime",
+            "example": "2022-12-07T10:31:04.528Z"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "127.0.0.1:3000/"
+        }
+      }
+    }
+  ]
+}

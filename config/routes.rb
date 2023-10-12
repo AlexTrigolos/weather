@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   end
 
   get '/health', to: 'health#status', defaults: { format: :json }
+
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
 end

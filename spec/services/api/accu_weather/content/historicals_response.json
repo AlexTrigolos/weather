@@ -1,0 +1,48 @@
+[
+  {
+    "LocalObservationDateTime": "2023-10-11T21:58:00+03:00",
+    "EpochTime": 1697050680,
+    "WeatherText": "Clear",
+    "WeatherIcon": 33,
+    "HasPrecipitation": false,
+    "PrecipitationType": null,
+    "IsDayTime": false,
+    "Temperature": {
+      "Metric": {
+        "Value": 6.1,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 43,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "MobileLink": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us",
+    "Link": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us"
+  },
+  {
+    "LocalObservationDateTime": "2023-10-11T20:58:00+03:00",
+    "EpochTime": 1697047080,
+    "WeatherText": "Clear",
+    "WeatherIcon": 33,
+    "HasPrecipitation": false,
+    "PrecipitationType": null,
+    "IsDayTime": false,
+    "Temperature": {
+      "Metric": {
+        "Value": 6.2,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 43,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "MobileLink": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us",
+    "Link": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us"
+  }
+]

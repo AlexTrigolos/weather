@@ -42,3 +42,7 @@ Layout/MultilineMethodCallIndentation:
 
 Metrics/MethodLength:
   CountAsOne: ['hash']
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - 'spec/requests/*'

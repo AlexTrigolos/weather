@@ -9,6 +9,7 @@ module Api
 
       def refresh_info
         data = @client.historical.data
+        return if data.blank?
 
         ActiveRecord::Base.transaction { Historical.exists? ? update_historicals(data) : create_historicals(data) }
       end

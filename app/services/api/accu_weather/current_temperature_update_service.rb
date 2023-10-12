@@ -8,7 +8,7 @@ module Api
       end
 
       def refresh_info
-        CurrentTemperature.first_or_initialize.update(temperature: @client.current_condition.data)
+        CurrentTemperature.first_or_initialize.update(@client.current_condition.data)
       end
     end
   end

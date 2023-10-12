@@ -1,0 +1,25 @@
+[
+  {
+    "LocalObservationDateTime": "2023-10-11T23:07:00+03:00",
+    "EpochTime": 1697054800,
+    "WeatherText": "Light rain",
+    "WeatherIcon": 12,
+    "HasPrecipitation": true,
+    "PrecipitationType": "Rain",
+    "IsDayTime": false,
+    "Temperature": {
+      "Metric": {
+        "Value": 6.3,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 43,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "MobileLink": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us",
+    "Link": "http://www.accuweather.com/en/ru/abc/1234567/current-weather/1234567?lang=en-us"
+  }
+]
